@@ -1061,6 +1061,7 @@ GameObject:
   - component: {fileID: 1865273744}
   - component: {fileID: 1865273743}
   - component: {fileID: 1865273742}
+  - component: {fileID: 1865273745}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1135,13 +1136,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865273741}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0012702402, y: -0.71057916, z: -0.0011585666, w: 0.70361525}
-  m_LocalPosition: {x: 234.09, y: 41.67, z: 70.15}
+  m_LocalRotation: {x: 0.001279631, y: -0.71628463, z: -0.0011481865, w: 0.6978062}
+  m_LocalPosition: {x: 234.04, y: 43, z: 70.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.008, y: -90.564, z: -0.197}
+  m_LocalEulerAnglesHint: {x: 0.008, y: -272.34808, z: -0.197}
+--- !u!111 &1865273745
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865273741}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  - {fileID: 7400000, guid: 2019f10f4ac5b1e46992159fef870e20, type: 2}
+  - {fileID: 7400000, guid: fdd0748a1a41d3246b9d2f5bf9bc5e5b, type: 2}
+  - {fileID: 7400000, guid: 8a9e52a1ad283614e8dc76d52cd2a2dc, type: 2}
+  - {fileID: 7400000, guid: 44ed633e65eec0a44885a9515df666ea, type: 2}
+  - {fileID: 7400000, guid: 62a0c836ebbeaaf4ea3bf120687839ca, type: 2}
+  - {fileID: 7400000, guid: 666f42672e5e92e41b57cb6d6a419c3d, type: 2}
+  - {fileID: 7400000, guid: 0e7917061da99504eba989d1c0e589d4, type: 2}
+  - {fileID: 7400000, guid: c69c57f0c9f4c1940a3922646269410a, type: 2}
+  - {fileID: 7400000, guid: 2b32ff0c7be4d5747a4c85ed5c5757bf, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &2042993742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1406,7 +1432,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1865273744}
   - {fileID: 348073417}
   - {fileID: 677712660}
   - {fileID: 1559707132}
@@ -1426,3 +1451,4 @@ SceneRoots:
   - {fileID: 2042993742}
   - {fileID: 152670301}
   - {fileID: 2074489324}
+  - {fileID: 1865273744}
