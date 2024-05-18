@@ -46,5 +46,6 @@ public class Campfire : MonoBehaviour
         {
             text.SetActive(false);
         }
+
     }
 }
