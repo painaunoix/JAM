@@ -38,8 +38,11 @@ public class Chrono : MonoBehaviour
     public IEnumerator timer()
     {
         yield return new WaitForSeconds(1);
-        if (secondt == 5 && elapsedTime == 9)
+        if (secondt == 5 && elapsedTime == 9) {
             minutes++;
+            secondt = -1;
+            elapsedTime = -1;
+        }
         if (elapsedTime == 9) {
             elapsedTime = -1;
             secondt++;
