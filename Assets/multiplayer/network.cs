@@ -27,7 +27,7 @@ public class host : MonoBehaviour
         transport = FindObjectOfType<UnityTransport>();
     }
     public async void CreateMultiplayerRelay(){
-        Allocation a = await RelayService.Instance.CreateAllocationAsync(4);
+        Allocation a = await RelayService.Instance.CreateAllocationAsync(8);
         JoinCodeInputField.text = await RelayService.Instance.GetJoinCodeAsync(a.AllocationId);
         transport.SetRelayServerData(a.RelayServer.IpV4, (ushort) a.RelayServer.Port, a.AllocationIdBytes, a.Key, a.ConnectionData);
         NetworkManager.Singleton.StartHost();
