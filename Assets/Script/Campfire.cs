@@ -10,6 +10,7 @@ public class Campfire : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         fireParticles.Stop();
         playerInRange = false;
     }
