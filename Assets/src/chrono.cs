@@ -40,7 +40,7 @@ public class Chrono : MonoBehaviour
         yield return new WaitForSeconds(1);
         if (secondt == 5 && elapsedTime == 9) {
             minutes++;
-            secondt = -1;
+            secondt = 0;
             elapsedTime = -1;
         }
         if (elapsedTime == 9) {
