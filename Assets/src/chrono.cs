@@ -14,7 +14,6 @@ public class Chrono : MonoBehaviour
     private float minutes = 0f;
     private float secondt = 0f;
     private float minutes10 = 0f;
-    private float nextUpdateTime = 0f;
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI text2;
 
