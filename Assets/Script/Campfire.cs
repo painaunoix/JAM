@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Campfire : MonoBehaviour
 {
-    public ParticleSystem fireParticles; // Référence au système de particules du feu
-    private bool playerInRange; // Pour savoir si le joueur est dans la zone
+    public ParticleSystem fireParticles;
+    private bool playerInRange;
 
     void Start()
     {
-        fireParticles.Stop(); // Assurez-vous que le feu est éteint au départ
-        playerInRange = false; // Le joueur n'est pas dans la zone au départ
+        fireParticles.Stop();
+        playerInRange = false;
     }
 
     void OnTriggerEnter(Collider other)
@@ -33,7 +33,7 @@ public class Campfire : MonoBehaviour
         {
             if (!fireParticles.isPlaying)
             {
-                fireParticles.Play(); // Allume le feu
+                fireParticles.Play();
             }
         }
     }
