@@ -1,10 +1,12 @@
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class Campfire : MonoBehaviour
 {
     public ParticleSystem fireParticles;
     private bool playerInRange;
-
+    [SerializeField]
+    private GameObject text;
     void Start()
     {
         fireParticles.Stop();
@@ -29,12 +31,20 @@ public class Campfire : MonoBehaviour
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange)
         {
-            if (!fireParticles.isPlaying)
+            text.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                fireParticles.Play();
+                if (!fireParticles.isPlaying)
+                {
+                    fireParticles.Play();
+                }
             }
+        }
+        if (!playerInRange || fireParticles.isPlaying)
+        {
+            text.SetActive(false);
         }
     }
 }
