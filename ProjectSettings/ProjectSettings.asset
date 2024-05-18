@@ -754,11 +754,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: ba0c95ca-95bf-49a2-b204-7eeecfce7476
+  cloudProjectId: 37cddd8f-1931-40ae-8452-d92149804261
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: JAM
-  organizationId: ducros
+  organizationId: nashiii
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
