@@ -8,6 +8,8 @@ public class move_cam : MonoBehaviour
     public GameObject main_menu;
     public GameObject settings_menu;
     public GameObject exit_menu;
+    public GameObject loading;
+    public GameObject scoreboard;
 
 
     // Start is called before the first frame update
@@ -36,7 +38,11 @@ public class move_cam : MonoBehaviour
         animator.SetBool("move_exit", true);
         main_menu.SetActive(false);
     }     
-
+    public void move_to_scoreboard()
+    {
+        animator.SetBool("move_to_scoreboard", true);
+        main_menu.SetActive(false);
+    }
     public void show_setting()
     {
         settings_menu.SetActive(true);
@@ -45,9 +51,13 @@ public class move_cam : MonoBehaviour
     {
         exit_menu.SetActive(true);
     }
-     public void show_main_menu()
+    public void show_main_menu()
     {
         main_menu.SetActive(true);
+    }
+    public void show_scoreboard()
+    {
+        scoreboard.SetActive(true);
     }
     public void goback_settings()
     {
@@ -59,10 +69,20 @@ public class move_cam : MonoBehaviour
         animator.SetBool("move_idle_exit", true);
         exit_menu.SetActive(false);
     }
+    public void goback_scoreboard()
+    {
+        animator.SetBool("scoreboard_to_idle", true);
+        scoreboard.SetActive(false);
+    }
+    public void show_loading()
+    {
+        loading.SetActive(true);
+    } 
     public void reset() 
     {
         animator.SetBool("move_start", false);
         animator.SetBool("move_settings", false);
-        animator.SetBool("move_exit", false);
+        animator.SetBool("move_exit", false); 
+        animator.SetBool("move_to_scoreboard", false);
     }
 }
