@@ -84,5 +84,9 @@ public class move_cam : MonoBehaviour
         animator.SetBool("move_settings", false);
         animator.SetBool("move_exit", false); 
         animator.SetBool("move_to_scoreboard", false);
+        animator.SetBool("move_idle_exit", false);
+        animator.SetBool("scoreboard_to_idle", false);
+        animator.SetBool("move_idle_settings", false);
+
     }
 }
