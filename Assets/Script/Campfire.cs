@@ -9,6 +9,7 @@ public class Campfire : MonoBehaviour
     private GameObject text;
     void Start()
     {
+        Cursor.visible = false;
         fireParticles.Stop();
         playerInRange = false;
     }
