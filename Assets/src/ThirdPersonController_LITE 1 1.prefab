@@ -9336,7 +9336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3276917222
+  GlobalObjectIdHash: 3128309599
   InScenePlacedSourceGlobalObjectIdHash: 3128309599
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -9388,7 +9388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1896f77a853e244696ec968f25b89ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1337427806420524024}
+  playerController: {fileID: 6409738228724271277}
   playerCam: {fileID: 135341058365256457}
 --- !u!143 &1337427806420524024
 CharacterController:
@@ -9407,7 +9407,7 @@ CharacterController:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
