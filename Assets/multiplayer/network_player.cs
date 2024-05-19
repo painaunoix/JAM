@@ -13,9 +13,7 @@ public class NetworkPlayer : NetworkBehaviour
     {
         base.OnNetworkSpawn();
 
-       playerController.enabled = true;
         playerController.enabled = IsOwner;
         playerCam.Priority = IsOwner ? 1 : 0;
-        playerController.enabled = false;
     }
 }
