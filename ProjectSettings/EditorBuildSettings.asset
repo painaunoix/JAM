@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/multiscene.unity
     guid: 74611027fbaa8574fb4c50485691b2ff
+  - enabled: 1
+    path: Assets/Scenes/multiplayer_menu.unity
+    guid: 07841dce3532da8499eb1c8d2903c77d
   m_configObjects: {}
