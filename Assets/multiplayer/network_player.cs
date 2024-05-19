@@ -8,12 +8,12 @@ public class NetworkPlayer : NetworkBehaviour
 {
 
     public CharacterController playerController;
-    public Cinemachine.CinemachineVirtualCamera playerCam;
+    public Camera playerCam;
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
 
         playerController.enabled = IsOwner;
-        playerCam.Priority = IsOwner ? 1 : 0;
+        playerCam.depth = IsOwner ? 1 : 0;
     }
 }
