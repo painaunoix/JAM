@@ -1,35 +1,75 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class deplacement : MonoBehaviour
+public class CarMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 5f; // Vitesse de la voiture
+    public float distance = 10f; // Distance à parcourir
+
+    private Vector3 startPoint;
+    private Vector3 endPoint;
+    private bool goingForward = true;
+
+    private Transform playerTransform = null;
+    private Vector3 playerOffset;
+
     void Start()
     {
-        
+        startPoint = transform.position;
+        endPoint = startPoint + transform.forward * distance;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        int temp = 0;
-        int var = 0;
+        MoveCar();
+        MovePlayer();
+    }
 
-        if (transform.position.x > -40 && transform.position.x < -42 && var == 0)
+    void MoveCar()
+    {
+        if (goingForward)
         {
-            temp = 1;
-            var = 1;
+            transform.position = Vector3.MoveTowards(transform.position, endPoint, speed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, endPoint) < 0.1f)
+            {
+                goingForward = false;
+            }
         }
-        if (transform.position.x > -22 && transform.position.x < -21 && var == 1)
+        else
         {
-            temp = 0;
-            var = 0;
+            transform.position = Vector3.MoveTowards(transform.position, startPoint, speed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, startPoint) < 0.1f)
+            {
+                goingForward = true;
+            }
         }
-        if (temp == 1)
-            transform.Translate(Vector3.forward * Time.deltaTime * 2);
-        if (temp == 0)
-            transform.Translate(Vector3.back * Time.deltaTime * 2);
+    }
+
+    void MovePlayer()
+    {
+        if (playerTransform != null)
+        {
+            playerTransform.position = transform.position + playerOffset;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerTransform = other.transform;
+            playerOffset = playerTransform.position - transform.position;
+            Debug.Log("Player entered the car");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerTransform = null;
+            Debug.Log("Player exited the car");
+        }
     }
 }
