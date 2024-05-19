@@ -6030,9 +6030,13 @@ PrefabInstance:
       value: NetworkManager
       objectReference: {fileID: 0}
     - target: {fileID: 8846238137255813546, guid: fac9fd5b18077af4a8ae367d3169a10e, type: 3}
+      propertyPath: LogLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846238137255813546, guid: fac9fd5b18077af4a8ae367d3169a10e, type: 3}
       propertyPath: NetworkConfig.PlayerPrefab
       value: 
-      objectReference: {fileID: 716519936521211623, guid: c34a071131e4717409bb77947163c449, type: 3}
+      objectReference: {fileID: 3514455857706160607, guid: 185bafad640b2024fb0a406ed0169127, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
