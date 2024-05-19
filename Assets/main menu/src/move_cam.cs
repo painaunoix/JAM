@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 
 public class move_cam : MonoBehaviour
@@ -22,6 +23,12 @@ public class move_cam : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void move_to_multiplayer()
+    {
+        animator.SetBool("move_to_multi", true);
+        main_menu.SetActive(false);
     }
     public void move_to_start()
     {
@@ -80,6 +87,7 @@ public class move_cam : MonoBehaviour
     } 
     public void reset() 
     {
+        animator.SetBool("move_to_multi", false);
         animator.SetBool("move_start", false);
         animator.SetBool("move_settings", false);
         animator.SetBool("move_exit", false); 

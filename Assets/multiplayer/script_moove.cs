@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         
         if (jumpInput && grounded){
             jumpInput = false;
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3f * gravity);
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -4f * gravity);
         }
 
         playerVelocity.y += gravity * Time.deltaTime;

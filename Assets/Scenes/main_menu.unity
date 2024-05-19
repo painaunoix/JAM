@@ -1604,7 +1604,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1865273747}
         m_TargetAssemblyTypeName: move_cam, Assembly-CSharp
-        m_MethodName: move_to_start
+        m_MethodName: move_to_multiplayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
