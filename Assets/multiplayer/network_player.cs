@@ -6,13 +6,15 @@ using UnityEngine;
 public class NetworkPlayer : NetworkBehaviour
 {
 
-  //  public CharacterController playerController;
+    public CharacterController playerController;
     public Cinemachine.CinemachineVirtualCamera playerCam;
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
 
-   //     playerController.enabled = IsOwner;
+       playerController.enabled = true;
+        playerController.enabled = IsOwner;
         playerCam.Priority = IsOwner ? 1 : 0;
+        playerController.enabled = false;
     }
 }
