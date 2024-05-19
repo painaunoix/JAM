@@ -10,6 +10,7 @@ public class move_cam : MonoBehaviour
     public GameObject exit_menu;
     public GameObject loading;
     public GameObject scoreboard;
+    public GameObject multi_menu;
 
 
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class move_cam : MonoBehaviour
 
      public void move_to_menu_multi()
     {
-        animator.SetBool("move_to_menu_multi", true);
+        animator.SetBool("move_to_multiplayer_menu", true);
         main_menu.SetActive(false);
     }
     public void move_to_multiplayer()
@@ -70,6 +71,10 @@ public class move_cam : MonoBehaviour
     {
         scoreboard.SetActive(true);
     }
+    public void show_multi_menu()
+    {
+        multi_menu.SetActive(true);
+    }
     public void goback_settings()
     {
         animator.SetBool("move_idle_settings", true);
@@ -91,7 +96,7 @@ public class move_cam : MonoBehaviour
     } 
     public void reset() 
     {
-        animator.SetBool("move_to_menu_multi", false);
+        animator.SetBool("move_to_multiplayer_menu", false);
         animator.SetBool("move_to_multi", false);
         animator.SetBool("move_start", false);
         animator.SetBool("move_settings", false);
