@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SimpleCollectibleScript : MonoBehaviour {
 
-	public static int nb_coin = 0;
+    public GameManager gameManager;
 
 	public enum CollectibleTypes {NoType, Type1, Type2, Type3, Type4, Type5}; // you can replace this with your own labels for the types of collectibles in your game!
 
@@ -29,14 +29,14 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 		if (rotate)
 			transform.Rotate (Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
-
+        gameManager = FindObjectOfType<GameManager>();
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
-			nb_coin++;
-            Debug.Log($"coin {nb_coin}");
+			gameManager.nb_coin++;
+            Debug.Log($"coin {gameManager.nb_coin}");
 			Collect ();
 		}
 	}
