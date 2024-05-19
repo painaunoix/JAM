@@ -24,6 +24,11 @@ public class move_cam : MonoBehaviour
         
     }
 
+     public void move_to_menu_multi()
+    {
+        animator.SetBool("move_to_menu_multi", true);
+        main_menu.SetActive(false);
+    }
     public void move_to_multiplayer()
     {
         animator.SetBool("move_to_multi", true);
@@ -86,6 +91,7 @@ public class move_cam : MonoBehaviour
     } 
     public void reset() 
     {
+        animator.SetBool("move_to_menu_multi", false);
         animator.SetBool("move_to_multi", false);
         animator.SetBool("move_start", false);
         animator.SetBool("move_settings", false);
