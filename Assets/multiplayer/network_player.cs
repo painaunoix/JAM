@@ -7,7 +7,7 @@ using UnityEngine;
 public class NetworkPlayer : NetworkBehaviour
 {
 
-    public vThirdPersonController playerController;
+    public CharacterController playerController;
     public Cinemachine.CinemachineVirtualCamera playerCam;
     public override void OnNetworkSpawn()
     {
