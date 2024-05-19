@@ -82,6 +82,8 @@ public class vThirdPersonCamera : MonoBehaviour
 
         distance = defaultDistance;
         currentHeight = height;
+        this.enabled=false;
+        this.enabled=true;
     }
 
     void FixedUpdate()
