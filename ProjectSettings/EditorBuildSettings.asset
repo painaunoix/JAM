@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/multiplayer/multi.unity
     guid: 06d0b09685c20c744904930c61c287ff
+  - enabled: 0
+    path: Assets/Scenes/poubelle.unity
+    guid: 833b9f6d65feafd47860f59f7ee5b2d4
   - enabled: 1
     path: Assets/Scenes/multiscene.unity
-    guid: 833b9f6d65feafd47860f59f7ee5b2d4
+    guid: 74611027fbaa8574fb4c50485691b2ff
   m_configObjects: {}
